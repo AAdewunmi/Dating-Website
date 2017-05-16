@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Dating Website </title>
+		<meta name="author" content="Ade Adewunmi">
+        <style>
+            fieldset{
+                    background:lightyellow;
+                    border:10px solid yellow;
+                    margin-bottom:10px;width:720px;
+                    }
+            label{
+                    width:180px;    
+                    display:inline-block;
+                    text-align:right;
+                    text-align:top;
+                    }
+            label:hover{
+                    font-size:40px;
+                    background-color:green;
+                    }
+            textarea{
+                    width:360px;
+                    height:50px
+                    }
+            .candy{
+                    width:auto;
+                    } 
+            .maroon{
+                    background:maroon;
+                    text-align:center;
+                    color:white;
+                   }
+            .purple{
+                    background:purple;
+                    text-align:center;
+                    color:white;
+                   }       
+        </style>
+	</head>
+    <body>
+        <h1>Please Enter Your Details For Our Dating Website!</h1>
+        <br>
+        <fieldset>
+            <legend> <h2>Your Face</h2> </legend>
+                <label for="yourimage"> Your image:</label>
+                <input type="file" name="yourimage" value="Choose File" required>
+                <br>
+                <label for="preview"> Image Preview: </label>
+                <img src="" width=10%/ id="preview">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><h2>Your General Details</h2></legend>
+                <label for="yourname"> Name: </label>
+                <input type="text" name="yourname" value="Your Full Name" id="yourname" required>
+                <br>
+                <label for="yourgender"> Gender: </label>
+                <input type="radio" name="yourgender" value="male" id="yourgender" required> <label for="yourgender" class="candy"> Male </label>
+                <input type="radio" name="yourgender" value="female" id="yourgender" required> <label for="yourgender" class="candy"> Female </label>
+                <br>
+                <label for="yourage"> Age: </label>
+                <input type="number" min="0" max="99" step="1" name="yourage" value="18" id="yourage" required>
+                <br>
+                <label for="yourdob"> Date of Birth: </label>
+                <input type="date" name="yourdob" value="" id="yourdob">
+                <br>
+                <label for="yourfavcolor"> Favourite Color: </label>
+                <input type="color" name="yourfavcolor" value="" id="yourfavcolor">
+                <br>
+                <label for="yourcountry"> Which Country: </label>
+                <select input type="select" name="yourcountry" value="" id="yourcountry">
+                <option value="noselect" selected>No Selection</option>
+                <option value="france">France</option>
+                <option value="ireland">Ireland</option>
+                <option value="italy">Italy</option>
+                <option value="scotland">Scotland</option>
+                <option value="wales">Wales</option>
+                </select>
+                <br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend><h2>Your Indicators</h2></legend>
+                <label for="height"> Height: </label>
+                <label for="height" class="maroon"> Short </label> <input type="range" min="0" max="100" name="height" value="" id="height"> <label for="height" class="purple"> Tall </label>  
+                <br>
+                <label for="salary"> Salary: </label> 
+                <label for="height" class="maroon"> Poor </label> <input type="range" min="0" max="100" name="salary" value="" id="salary"> <label for="height" class="purple"> Rich </label> 
+        </fieldset>
+        <br>
+        <form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend><h2>Your Contact Information</h2></legend>
+                    <label for="youremail"> Email: </label>
+                    <input type="email" name="youremail" value="aa@aeo.com" id="youremail">
+                    <br>
+                    <label for="yourmobile"> Mobile: </label>
+                    <input type="tel" name="yourmobile" value="123-345-789" id="yourmobile">
+                    <br>
+                    <label for="youraddress"> Address: </label>
+                    <textarea row="5" cols="50" input type="textarea" name="youraddress" id="youraddress">
+                    Insert Your Address
+                    </textarea>
+                    <br>
+                    <label for="yourmethodofcontact"> Method to contact you: </label>
+                    <input type="checkbox" name="yourmethodofcontact" value="email" id="yourmethodofcontact" required> <label for="yourmethodofcontact" class="candy"> E mail </label>  
+                    <input type="checkbox" name="yourmethodofcontact" value="whatsapp" id="yourmethodofcontact" required> <label for="yourmethodofcontact" class="candy"> Whatsapp </label>
+                    <input type="checkbox" name="yourmethodofcontact" value="inappchat" id="yourmethodofcontact" required> <label for="yourmethodofcontact" class="candy"> In-app chat </label>
+            </fieldset>
+            <br>
+                <input type="submit" value="Submit">
+        </form>
+        <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+    </body>
